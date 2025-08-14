@@ -2,71 +2,87 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الكمبري | جيولوجيا مصر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>جيولوجيا مصر</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
+<body class="bg-stone-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-pink-700 text-white p-4 text-center">
-    <h1 class="text-3xl font-bold">جيولوجيا مصر</h1>
-    <p class="text-sm">سلسلة العصور الجيولوجية</p>
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur border-b z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-amber-800">جيولوجيا مصر</h1>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#hero" class="hover:text-amber-700">الرئيسية</a>
+        <a href="#eras" class="hover:text-amber-700">العصور</a>
+        <a href="#maps" class="hover:text-amber-700">الخرائط</a>
+        <a href="#about" class="hover:text-amber-700">عن المشروع</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Cambrian Section -->
-  <main class="max-w-5xl mx-auto p-6">
-    
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold text-pink-700 mb-3">الكمبري (Cambrian)</h2>
-      <p class="mb-2">الفترة الزمنية: <span class="font-semibold">541 – 485 مليون سنة</span>.</p>
-      <p>العصر الكامبري يمثل بداية حقب الباليوزويك، وبيظهر في مصر بشكل رئيسي في جنوب سيناء والصحراء الشرقية.</p>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex items-center justify-center bg-cover bg-center" 
+           style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/97/Sandstone_layers_in_Egypt.jpg');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative text-center text-white px-4">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">اكتشف جيولوجيا مصر</h2>
+      <p class="mb-6 text-lg md:text-xl">رحلة عبر العصور الجيولوجية، من الكمبري حتى الحاضر</p>
+      <a href="#eras" class="bg-amber-700 hover:bg-amber-800 px-6 py-3 rounded-lg text-lg font-semibold">ابدأ الاستكشاف</a>
+    </div>
+  </section>
 
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">أماكن الظهور في مصر</h3>
-      <ul class="list-disc pr-6">
-        <li>جنوب سيناء – مناطق مثل سرابيط الخادم.</li>
-        <li>الصحراء الشرقية – تكوينات رملية قديمة.</li>
-      </ul>
-    </section>
+  <!-- Eras Section -->
+  <section id="eras" class="max-w-7xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold text-center mb-10 text-amber-800">العصور الجيولوجية</h3>
+    <div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2">
 
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">التكوينات (Formations)</h3>
-      <ul class="list-disc pr-6">
-        <li>تكوين أبو حدرية (Abu Hadriya Formation).</li>
-        <li>تكوين سرابيط الخادم.</li>
-      </ul>
-    </section>
-
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">الحفريات المرشدة (Index Fossils)</h3>
-      <p>أهم الحفريات المرشدة في العصر الكامبري هي <span class="font-semibold">الترايلوبايت (Trilobites)</span>، اللي بتميزه بوضوح.</p>
-    </section>
-
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">الأهمية الاقتصادية</h3>
-      <p>رمال كوارتزية عالية الجودة تُستخدم في الصناعات الزجاجية والسيراميك.</p>
-    </section>
-
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">الـ Paleoshoreline</h3>
-      <p>خلال العصر الكامبري، كانت أجزاء كبيرة من مصر مغطاة بمياه ضحلة، خصوصًا في سيناء وجنوب الصحراء الشرقية.</p>
-      <img src="paleoshoreline-cambrian.jpg" alt="خريطة Paleoshoreline العصر الكامبري" class="rounded-lg shadow my-3">
-    </section>
-
-    <section class="mb-10">
-      <h3 class="text-xl font-bold mb-2">صور من الواقع</h3>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="cambrian-outcrop.jpg" alt="Outcrop" class="rounded-lg shadow">
-        <img src="cambrian-fossil.jpg" alt="Trilobite" class="rounded-lg shadow">
+      <!-- Paleozoic -->
+      <div class="bg-amber-50 rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+        <h4 class="text-xl font-semibold text-amber-800 mb-2">الباليوزويك (Paleozoic)</h4>
+        <p class="text-sm text-gray-700 mb-3">من الكمبري حتى البرمي. بداية الحياة المعقدة.</p>
+        <a href="cambrian.html" class="bg-amber-700 text-white px-4 py-2 rounded-lg text-sm">استكشف</a>
       </div>
-    </section>
 
-  </main>
+      <!-- Mesozoic -->
+      <div class="bg-amber-50 rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+        <h4 class="text-xl font-semibold text-amber-800 mb-2">الميزوزويك (Mesozoic)</h4>
+        <p class="text-sm text-gray-700 mb-3">عصر الديناصورات وبداية انفصال القارات.</p>
+        <a href="mesozoic.html" class="bg-amber-700 text-white px-4 py-2 rounded-lg text-sm">استكشف</a>
+      </div>
+
+      <!-- Cenozoic -->
+      <div class="bg-amber-50 rounded-xl shadow hover:shadow-lg transition p-6 text-center">
+        <h4 class="text-xl font-semibold text-amber-800 mb-2">السينوزويك (Cenozoic)</h4>
+        <p class="text-sm text-gray-700 mb-3">العصر الحديث: تطور الثدييات والبشر.</p>
+        <a href="cenozoic.html" class="bg-amber-700 text-white px-4 py-2 rounded-lg text-sm">استكشف</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Maps Section -->
+  <section id="maps" class="bg-stone-100 py-16">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6 text-amber-800">الخرائط الجيولوجية</h3>
+      <p class="text-gray-700 mb-4">اكتشف خرائط مصر الجيولوجية مع تظليل للعصور المختلفة والـ Paleoshorelines.</p>
+      <img src="egypt-geology-map.jpg" alt="الخريطة الجيولوجية لمصر" class="mx-auto rounded-lg shadow max-h-[400px]">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6 text-amber-800">عن المشروع</h3>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        هذا الموقع يهدف إلى توثيق جيولوجيا مصر عبر العصور، مع التركيز على التكوينات، الحفريات، والموارد الطبيعية. 
+        سيتم تطويره تدريجيًا ليشمل صور واقعية، خرائط تفاعلية، ومراجع علمية.
+      </p>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-pink-700 text-white text-center p-4 mt-10">
+  <footer class="bg-amber-800 text-white py-6 mt-10 text-center">
     <p>© 2025 جيولوجيا مصر | جميع الحقوق محفوظة</p>
   </footer>
 
