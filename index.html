@@ -1,318 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Geology of Egypt — جيولوجيا مصر</title>
-
-  <!-- Tailwind CDN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكمبري | جيولوجيا مصر</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-sA+q4g0u0v6uO3lXw6v6u6Z4I4cQ2u0qG1v2w5n5n+8=" crossorigin=""/>
-
-  <style>
-    :root{
-      --accent:#d6336c; /* rosy accent */
-    }
-    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-    .fade-up{ transform: translateY(8px); opacity: 0; transition: all .45s ease; }
-    .fade-up.show{ transform: translateY(0); opacity: 1; }
-    /* leaflet map height */
-    #map { height: 480px; border-radius: 12px; }
-    /* simple lightbox */
-    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.8); align-items:center; justify-content:center; z-index:60; }
-    .lightbox img{ max-width:90%; max-height:85%; border-radius:6px; }
-  </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
 
   <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white font-bold">G</div>
-        <div>
-          <h1 class="text-lg font-bold">Geology of Egypt</h1>
-          <small class="text-xs text-slate-500">جيولوجيا مصر</small>
-        </div>
-      </div>
-
-      <nav class="mr-auto hidden md:flex gap-6 px-6 text-sm">
-        <a href="#overview" class="hover:text-[var(--accent)]">الرئيسية</a>
-        <a href="#stratigraphy" class="hover:text-[var(--accent)]">الطبقات</a>
-        <a href="#tectonics" class="hover:text-[var(--accent)]">التكتونيك</a>
-        <a href="#map-section" class="hover:text-[var(--accent)]">الخرائط</a>
-        <a href="#resources" class="hover:text-[var(--accent)]">المراجع</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <button id="langBtn" class="px-3 py-1 rounded bg-white border text-sm">EN</button>
-        <a href="#contact" class="bg-[var(--accent)] text-white px-4 py-2 rounded-lg text-sm">تواصل</a>
-      </div>
-    </div>
+  <header class="bg-pink-700 text-white p-4 text-center">
+    <h1 class="text-3xl font-bold">جيولوجيا مصر</h1>
+    <p class="text-sm">سلسلة العصور الجيولوجية</p>
   </header>
 
-  <!-- Hero -->
-  <section id="overview" class="relative">
-    <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-4xl font-extrabold mb-4">جيولوجيا مصر — Geology of Egypt</h2>
-        <p class="text-lg text-slate-700 mb-6">
-          موقع تعليمي وعلمي يجمع الخرائط، التوصيف الطبقي، الموارد المعدنية، وأهم البحوث المتعلقة بجيولوجيا مصر.
-        </p>
-        <div class="flex gap-3">
-          <a href="#map-section" class="bg-[var(--accent)] text-white px-5 py-3 rounded-lg shadow">استعرض الخرائط</a>
-          <a href="#resources" class="bg-white border px-5 py-3 rounded-lg">المراجع والملفات</a>
-        </div>
+  <!-- Cambrian Section -->
+  <main class="max-w-5xl mx-auto p-6">
+    
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-pink-700 mb-3">الكمبري (Cambrian)</h2>
+      <p class="mb-2">الفترة الزمنية: <span class="font-semibold">541 – 485 مليون سنة</span>.</p>
+      <p>العصر الكامبري يمثل بداية حقب الباليوزويك، وبيظهر في مصر بشكل رئيسي في جنوب سيناء والصحراء الشرقية.</p>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">أماكن الظهور في مصر</h3>
+      <ul class="list-disc pr-6">
+        <li>جنوب سيناء – مناطق مثل سرابيط الخادم.</li>
+        <li>الصحراء الشرقية – تكوينات رملية قديمة.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">التكوينات (Formations)</h3>
+      <ul class="list-disc pr-6">
+        <li>تكوين أبو حدرية (Abu Hadriya Formation).</li>
+        <li>تكوين سرابيط الخادم.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">الحفريات المرشدة (Index Fossils)</h3>
+      <p>أهم الحفريات المرشدة في العصر الكامبري هي <span class="font-semibold">الترايلوبايت (Trilobites)</span>، اللي بتميزه بوضوح.</p>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">الأهمية الاقتصادية</h3>
+      <p>رمال كوارتزية عالية الجودة تُستخدم في الصناعات الزجاجية والسيراميك.</p>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">الـ Paleoshoreline</h3>
+      <p>خلال العصر الكامبري، كانت أجزاء كبيرة من مصر مغطاة بمياه ضحلة، خصوصًا في سيناء وجنوب الصحراء الشرقية.</p>
+      <img src="paleoshoreline-cambrian.jpg" alt="خريطة Paleoshoreline العصر الكامبري" class="rounded-lg shadow my-3">
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-xl font-bold mb-2">صور من الواقع</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="cambrian-outcrop.jpg" alt="Outcrop" class="rounded-lg shadow">
+        <img src="cambrian-fossil.jpg" alt="Trilobite" class="rounded-lg shadow">
       </div>
+    </section>
 
-      <div class="rounded-xl overflow-hidden shadow">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="rocks" class="w-full h-72 object-cover cursor-pointer preview-img">
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick cards -->
-  <section class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
-    <article class="bg-white p-6 rounded-xl shadow">
-      <h3 class="font-semibold mb-2">Stratigraphy — الطبقات</h3>
-      <p class="text-sm text-slate-600">سرد للوحدات الطبقية الرئيسية في مصر: الكمبري-الباليوزوي، الميسوزوي، الحجر الجيري، الرسوبيات الحديثة...</p>
-    </article>
-    <article class="bg-white p-6 rounded-xl shadow">
-      <h3 class="font-semibold mb-2">Tectonics — التكتونيك</h3>
-      <p class="text-sm text-slate-600">معلومات عن النشاط التكتوني، الصدوع الرئيسية (Suez Rift, Gulf of Aqaba)، وتأثيرها على التكوينات.</p>
-    </article>
-    <article class="bg-white p-6 rounded-xl shadow">
-      <h3 class="font-semibold mb-2">Mineral Resources — الموارد</h3>
-      <p class="text-sm text-slate-600">خارطة للخامات: الذهب، الفوسفات، الحديد، البترول، والموارد الصناعية.</p>
-    </article>
-  </section>
-
-  <!-- Stratigraphy -->
-  <section id="stratigraphy" class="max-w-7xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-4">الطبقات — Stratigraphy</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">Paleozoic — الباليوزوي</h4>
-        <p class="text-sm text-slate-600">وحدات رسوبية قديمة تحوي تشكيلات كربونات وصخور قاعدية...</p>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">Mesozoic — الميزوزوي</h4>
-        <p class="text-sm text-slate-600">طبقات جيرية ورملية، تتضمن موارد هيدروكربونية في بعض المناطق.</p>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">Cenozoic — السينوزوي</h4>
-        <p class="text-sm text-slate-600">رسوبيات حديثة، دلتا النيل، وحواجز رملية ساحلية.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tectonics -->
-  <section id="tectonics" class="max-w-7xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-4">التكتونيك — Tectonics</h3>
-    <div class="grid md:grid-cols-2 gap-6 items-center">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p class="text-slate-700">ملخص عن الحركات التكتونية، الصدوع الرئيسية، وتأثيرها على ترسبات النفط والمعدن في مصر.</p>
-        <ul class="mt-3 text-sm text-slate-600 list-disc pr-5">
-          <li>حزام الصدوع حول البحر الأحمر وSuez Rift.</li>
-          <li>تكوينات مرجانية وسهول الرسوبيات الساحلية.</li>
-        </ul>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=1000&q=80" alt="tectonic" class="w-full rounded-xl object-cover h-60 preview-img cursor-pointer">
-      </div>
-    </div>
-  </section>
-
-  <!-- Map section -->
-  <section id="map-section" class="max-w-7xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-4">الخرائط التفاعلية — Interactive Map</h3>
-
-    <!-- map controls -->
-    <div class="flex flex-col md:flex-row items-center gap-3 mb-4">
-      <div class="flex gap-2">
-        <button id="show-strata" class="px-3 py-2 rounded bg-[var(--accent)] text-white text-sm">عرض الطبقات</button>
-        <button id="show-minerals" class="px-3 py-2 rounded bg-white border text-sm">عرض الخامات</button>
-      </div>
-      <div class="ml-auto text-sm text-slate-600">مركز الخريطة: مصر — يمكنك إضافة ملفات GeoJSON.</div>
-    </div>
-
-    <div id="map" class="shadow"></div>
-
-    <p class="mt-3 text-sm text-slate-500">ملاحظة: القالب يحتوي مثالًا بسيطًا لطبقات GeoJSON — استبدل ملفاتك الخاصة لاحقًا.</p>
-  </section>
-
-  <!-- Resources / Publications -->
-  <section id="resources" class="max-w-7xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-4">المراجع — Resources & Publications</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <article class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">خرائط جيولوجية مصرية (1990)</h4>
-        <p class="text-sm text-slate-600 mb-3">تحميل PDF</p>
-        <a href="#" class="text-sm text-[var(--accent)]">تحميل</a>
-      </article>
-      <article class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">دراسة الخامات في الصحراء الغربية</h4>
-        <p class="text-sm text-slate-600 mb-3">ملخص بحثي</p>
-        <a href="#" class="text-sm text-[var(--accent)]">تحميل</a>
-      </article>
-      <article class="bg-white p-4 rounded-xl shadow">
-        <h4 class="font-semibold">مقالات وأبحاث</h4>
-        <p class="text-sm text-slate-600 mb-3">قائمة روابط لأبحاث مفيدة</p>
-        <a href="#" class="text-sm text-[var(--accent)]">عرض</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="max-w-7xl mx-auto px-4 py-12">
-    <h3 class="text-2xl font-bold mb-4">معرض صور — Gallery</h3>
-    <div class="grid sm:grid-cols-3 gap-4">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" class="w-full h-44 object-cover rounded-lg preview-img cursor-pointer">
-      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" class="w-full h-44 object-cover rounded-lg preview-img cursor-pointer">
-      <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f91421?auto=format&fit=crop&w=1200&q=80" class="w-full h-44 object-cover rounded-lg preview-img cursor-pointer">
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-white py-12">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold mb-4">تواصل معنا</h3>
-      <p class="text-slate-600 mb-6">لو عندك بيانات جيولوجية، خرائط، أو محتوى تحب تضيفه تواصل معانا.</p>
-      <form id="contactForm" class="max-w-xl mx-auto grid gap-3">
-        <input placeholder="اسمك" class="border px-3 py-2 rounded" required />
-        <input placeholder="بريدك الإلكتروني" type="email" class="border px-3 py-2 rounded" required />
-        <textarea placeholder="رسالتك / مرفقات" class="border px-3 py-2 rounded" rows="4"></textarea>
-        <button type="submit" class="bg-[var(--accent)] text-white px-4 py-2 rounded">أرسل</button>
-      </form>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>© <span id="year"></span> Geology of Egypt — جيولوجيا مصر</div>
-      <div class="text-sm text-slate-400">Designed by Ayman — جاهز للتطوير</div>
-    </div>
+  <footer class="bg-pink-700 text-white text-center p-4 mt-10">
+    <p>© 2025 جيولوجيا مصر | جميع الحقوق محفوظة</p>
   </footer>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <img id="lightboxImg" src="" alt="preview">
-  </div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-o9N1jLkGq3xXbQvYxCq0xE6gkf7xgk6bJ0J6hYhP5VY=" crossorigin=""></script>
-
-  <script>
-    // small helpers
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Language toggle (basic)
-    const langBtn = document.getElementById('langBtn');
-    let lang = 'ar';
-    langBtn.addEventListener('click', () => {
-      if(lang === 'ar') {
-        lang = 'en';
-        langBtn.textContent = 'AR';
-        // Example: change headings (you can expand)
-        document.querySelector('h2').textContent = 'Geology of Egypt';
-      } else {
-        lang = 'ar';
-        langBtn.textContent = 'EN';
-        document.querySelector('h2').textContent = 'جيولوجيا مصر — Geology of Egypt';
-      }
-    });
-
-    // Lightbox for preview images
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    document.querySelectorAll('.preview-img').forEach(img=>{
-      img.addEventListener('click', ()=> {
-        lbImg.src = img.src;
-        lb.style.display = 'flex';
-      });
-    });
-    lb.addEventListener('click', ()=> lb.style.display='none');
-
-    /* -----------------------
-       Leaflet map init (center on Egypt)
-       ----------------------- */
-    const map = L.map('map', { zoomControl:true }).setView([26.5, 30], 5);
-
-    // OpenStreetMap tiles (no API key)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Example GeoJSON layers (replace with your files)
-    // Simple polygon example (a tiny dummy polygon near Cairo — replace)
-    const exampleStrata = {
-      "type": "FeatureCollection",
-      "features": [
-        {
-          "type":"Feature",
-          "properties": { "name": "Example strata", "unit":"Limestone" },
-          "geometry": {
-            "type":"Polygon",
-            "coordinates":[[
-              [31.0,30.2],[31.2,30.2],[31.2,30.0],[31.0,30.0],[31.0,30.2]
-            ]]
-          }
-        }
-      ]
-    };
-
-    // Example point for mineral occurrence
-    const exampleMinerals = {
-      "type":"FeatureCollection","features":[
-        { "type":"Feature","properties":{"name":"Gold occurrence","type":"gold"},"geometry":{"type":"Point","coordinates":[28.0,26.0]}}
-      ]
-    };
-
-    const strataLayer = L.geoJSON(exampleStrata, {
-      style: { color:'#e11d48', weight:1, fillOpacity:0.3 },
-      onEachFeature: (f,layer)=> {
-        layer.bindPopup(`<b>${f.properties.name}</b><br/>Unit: ${f.properties.unit}`);
-      }
-    });
-
-    const mineralsLayer = L.geoJSON(exampleMinerals, {
-      pointToLayer: (f,latlng)=> L.circleMarker(latlng, { radius:6, fillColor:'#ffd166', color:'#c47f00', weight:1, fillOpacity:1 }),
-      onEachFeature: (f,layer)=> layer.bindPopup(`<b>${f.properties.name}</b><br/>Type: ${f.properties.type}`)
-    });
-
-    // controls
-    document.getElementById('show-strata').addEventListener('click', ()=>{
-      if(map.hasLayer(strataLayer)) map.removeLayer(strataLayer);
-      else strataLayer.addTo(map);
-    });
-    document.getElementById('show-minerals').addEventListener('click', ()=>{
-      if(map.hasLayer(mineralsLayer)) map.removeLayer(mineralsLayer);
-      else mineralsLayer.addTo(map);
-    });
-
-    /* -----------------------
-       How to add your GeoJSON files:
-       - Upload your .geojson to the same folder as index.html (or host it).
-       - Use fetch('./yourfile.geojson').then(r=>r.json()).then(data=>L.geoJSON(data).addTo(map));
-       - Each feature can have properties you show in popup.
-       ----------------------- */
-
-    /* -----------------------
-       Simple contact form handler (client-side only)
-       Replace with backend or Google Apps Script for storage.
-       ----------------------- */
-    document.getElementById('contactForm').addEventListener('submit', (e)=>{
-      e.preventDefault();
-      alert('شكراً! الرسالة استلمت محليًا — اربط فورم بخادم أو Google Apps Script لحفظها.');
-      e.target.reset();
-    });
-
-  </script>
 </body>
 </html>
