@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>جيولوجيا مصر</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* لتفعيل السحب مع الماوس */
+    #mapContainer {
+      overflow: hidden;
+      cursor: grab;
+    }
+    #mapContainer:active {
+      cursor: grabbing;
+    }
+    #geoMap {
+      transition: transform 0.2s ease;
+    }
+  </style>
 </head>
 <body class="bg-stone-50 text-gray-800">
 
@@ -65,8 +78,12 @@
   <section id="maps" class="bg-stone-100 py-16">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-6 text-amber-800">الخرائط الجيولوجية</h3>
-      <p class="text-gray-700 mb-4">اكتشف خرائط مصر الجيولوجية مع تظليل للعصور المختلفة والـ Paleoshorelines.</p>
-      <img src="egypt-geology-map.jpg" alt="الخريطة الجيولوجية لمصر" class="mx-auto rounded-lg shadow max-h-[400px]">
+      <p class="text-gray-700 mb-4">الخريطة الجيولوجية لمصر توضح توزيع الصخور والعصور المختلفة. يمكنك تكبيرها وتصغيرها والتحرك داخلها.</p>
+      
+      <div id="mapContainer" class="mx-auto rounded-lg shadow max-h-[500px] overflow-hidden relative w-full max-w-3xl">
+        <img id="geoMap" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Egypt_geologic_map-ar.jpg" 
+             alt="الخريطة الجيولوجية لمصر" class="w-full">
+      </div>
     </div>
   </section>
 
@@ -74,10 +91,12 @@
   <section id="about" class="py-16">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-6 text-amber-800">عن المشروع</h3>
-      <p class="text-gray-700 leading-relaxed text-lg">
-        هذا الموقع يهدف إلى توثيق جيولوجيا مصر عبر العصور، مع التركيز على التكوينات، الحفريات، والموارد الطبيعية. 
-        سيتم تطويره تدريجيًا ليشمل صور واقعية، خرائط تفاعلية، ومراجع علمية.
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        هذا الموقع يهدف إلى توثيق جيولوجيا مصر عبر العصور، مع التركيز على التكوينات، الحفريات، 
+        والموارد الطبيعية. سيتم تطويره تدريجيًا ليشمل صور واقعية، خرائط تفاعلية، ومراجع علمية.
       </p>
+      <p class="text-amber-800 font-semibold text-lg">إعداد: أيمن مصطفى</p>
+      <p class="text-sm text-gray-600">طالب جيولوجيا – كلية العلوم، جامعة حلوان</p>
     </div>
   </section>
 
@@ -85,6 +104,43 @@
   <footer class="bg-amber-800 text-white py-6 mt-10 text-center">
     <p>© 2025 جيولوجيا مصر | جميع الحقوق محفوظة</p>
   </footer>
+
+  <!-- JS for Zoom & Pan -->
+  <script>
+    const map = document.getElementById("geoMap");
+    const container = document.getElementById("mapContainer");
+
+    let scale = 1;
+    let posX = 0, posY = 0;
+    let isDragging = false, startX, startY;
+
+    // Zoom with wheel
+    container.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0) scale *= 1.1;
+      else scale /= 1.1;
+      updateTransform();
+    });
+
+    // Drag map
+    container.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.clientX - posX;
+      startY = e.clientY - posY;
+    });
+    container.addEventListener("mouseup", () => isDragging = false);
+    container.addEventListener("mouseleave", () => isDragging = false);
+    container.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      posX = e.clientX - startX;
+      posY = e.clientY - startY;
+      updateTransform();
+    });
+
+    function updateTransform() {
+      map.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+    }
+  </script>
 
 </body>
 </html>
